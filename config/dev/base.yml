@@ -1,0 +1,24 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: tensquare-base
+  jpa:
+    hibernate:
+      ddl-auto: none  #什么都不做
+    database: mysql
+    generate-ddl: false # 是否生成ddl语句
+    show-sql: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tensquare_base?useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: gaochaojie
+  rabbitmq:
+    host: 127.0.0.1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka
+  instance:
+   prefer-ip-address: true
