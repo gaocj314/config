@@ -6,6 +6,8 @@ spring:
   data:
     elasticsearch:
       cluster-nodes: 127.0.0.1:9200
+      repositories:
+        enable: true    #是否开启本地缓存
 eureka:
   client:
     service-url:
